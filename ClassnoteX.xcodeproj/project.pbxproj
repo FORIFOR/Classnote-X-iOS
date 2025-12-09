@@ -6,13 +6,51 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C3A44D4F2EDE334800B23705 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D4E2EDE334800B23705 /* FirebaseAuth */; };
+		C3A44D512EDE334800B23705 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D502EDE334800B23705 /* FirebaseCore */; };
+		C3A44D532EDE334800B23705 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D522EDE334800B23705 /* FirebaseFirestore */; };
+		C3A44D602EE0A00000B23705 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D622EE0A00000B23705 /* GoogleSignIn */; };
+		C3A44D612EE0A00000B23705 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D632EE0A00000B23705 /* GoogleSignInSwift */; };
+		C3A44D852EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3A44D842EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist */; };
+		C3A44DA22EE0C05000B23705 /* ClassnoteXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A44DA12EE0C05000B23705 /* ClassnoteXUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3A44DA92EE0C05000B23705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A44D0D2EDC7DA100B23705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A44D142EDC7DA100B23705;
+			remoteInfo = ClassnoteX;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C3A44D152EDC7DA100B23705 /* ClassnoteX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassnoteX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A44D842EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClassnoteX/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3A44DA12EE0C05000B23705 /* ClassnoteXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassnoteXUITests.swift; sourceTree = "<group>"; };
+		C3A44DA32EE0C05000B23705 /* ClassnoteXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassnoteXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A44DA42EE0C05000B23705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C3A44D812EE0B30100B23705 /* Exceptions for "ClassnoteX" folder in "ClassnoteX" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+				Info.plist,
+			);
+			target = C3A44D142EDC7DA100B23705 /* ClassnoteX */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C3A44D172EDC7DA100B23705 /* ClassnoteX */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C3A44D812EE0B30100B23705 /* Exceptions for "ClassnoteX" folder in "ClassnoteX" target */,
+			);
 			path = ClassnoteX;
 			sourceTree = "<group>";
 		};
@@ -20,6 +58,18 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		C3A44D122EDC7DA100B23705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A44D602EE0A00000B23705 /* GoogleSignIn in Frameworks */,
+				C3A44D512EDE334800B23705 /* FirebaseCore in Frameworks */,
+				C3A44D4F2EDE334800B23705 /* FirebaseAuth in Frameworks */,
+				C3A44D532EDE334800B23705 /* FirebaseFirestore in Frameworks */,
+				C3A44D612EE0A00000B23705 /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A44DA72EE0C05000B23705 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,6 +84,8 @@
 			children = (
 				C3A44D172EDC7DA100B23705 /* ClassnoteX */,
 				C3A44D162EDC7DA100B23705 /* Products */,
+				C3A44D842EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist */,
+				C3A44DA52EE0C05000B23705 /* ClassnoteXUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +93,18 @@
 			isa = PBXGroup;
 			children = (
 				C3A44D152EDC7DA100B23705 /* ClassnoteX.app */,
+				C3A44DA32EE0C05000B23705 /* ClassnoteXUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C3A44DA52EE0C05000B23705 /* ClassnoteXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44DA12EE0C05000B23705 /* ClassnoteXUITests.swift */,
+				C3A44DA42EE0C05000B23705 /* Info.plist */,
+			);
+			path = ClassnoteXUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,10 +127,32 @@
 			);
 			name = ClassnoteX;
 			packageProductDependencies = (
+				C3A44D4E2EDE334800B23705 /* FirebaseAuth */,
+				C3A44D502EDE334800B23705 /* FirebaseCore */,
+				C3A44D522EDE334800B23705 /* FirebaseFirestore */,
+				C3A44D622EE0A00000B23705 /* GoogleSignIn */,
+				C3A44D632EE0A00000B23705 /* GoogleSignInSwift */,
 			);
 			productName = ClassnoteX;
 			productReference = C3A44D152EDC7DA100B23705 /* ClassnoteX.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C3A44DA62EE0C05000B23705 /* ClassnoteXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A44DAC2EE0C05000B23705 /* Build configuration list for PBXNativeTarget "ClassnoteXUITests" */;
+			buildPhases = (
+				C3A44DA72EE0C05000B23705 /* Frameworks */,
+				C3A44DA82EE0C05000B23705 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3A44DAA2EE0C05000B23705 /* PBXTargetDependency */,
+			);
+			name = ClassnoteXUITests;
+			productName = ClassnoteXUITests;
+			productReference = C3A44DA32EE0C05000B23705 /* ClassnoteXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +167,10 @@
 					C3A44D142EDC7DA100B23705 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
+					C3A44DA62EE0C05000B23705 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = C3A44D142EDC7DA100B23705;
+					};
 				};
 			};
 			buildConfigurationList = C3A44D102EDC7DA100B23705 /* Build configuration list for PBXProject "ClassnoteX" */;
@@ -94,12 +182,17 @@
 			);
 			mainGroup = C3A44D0C2EDC7DA100B23705;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C3A44D4D2EDE334800B23705 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C3A44D642EE0A00000B23705 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C3A44D162EDC7DA100B23705 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C3A44D142EDC7DA100B23705 /* ClassnoteX */,
+				C3A44DA62EE0C05000B23705 /* ClassnoteXUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -109,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A44D852EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +216,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3A44DA82EE0C05000B23705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A44DA22EE0C05000B23705 /* ClassnoteXUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3A44DAA2EE0C05000B23705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3A44D142EDC7DA100B23705 /* ClassnoteX */;
+			targetProxy = C3A44DA92EE0C05000B23705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C3A44D1E2EDC7DA200B23705 /* Debug */ = {
@@ -256,6 +366,11 @@
 				DEVELOPMENT_TEAM = 6RR7572ZLU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClassnoteX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CLASSNOTE-X";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "録音機能のためにマイクへのアクセスを使用します。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音中の文字起こしに使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -266,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shuhei.ClassnoteX;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horio.GLASSNOTEX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -288,6 +403,11 @@
 				DEVELOPMENT_TEAM = 6RR7572ZLU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClassnoteX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CLASSNOTE-X";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "録音機能のためにマイクへのアクセスを使用します。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音中の文字起こしに使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shuhei.ClassnoteX;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horio.GLASSNOTEX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -307,6 +427,106 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3A44DAD2EE0C05000B23705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RR7572ZLU;
+				INFOPLIST_FILE = ClassnoteXUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.classnoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClassnoteX;
+			};
+			name = Debug;
+		};
+		C3A44DAE2EE0C05000B23705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RR7572ZLU;
+				INFOPLIST_FILE = ClassnoteXUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.classnoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClassnoteX;
 			};
 			name = Release;
 		};
@@ -331,7 +551,63 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C3A44DAC2EE0C05000B23705 /* Build configuration list for PBXNativeTarget "ClassnoteXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A44DAD2EE0C05000B23705 /* Debug */,
+				C3A44DAE2EE0C05000B23705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3A44D4D2EDE334800B23705 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.6.0;
+			};
+		};
+		C3A44D642EE0A00000B23705 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3A44D4E2EDE334800B23705 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A44D4D2EDE334800B23705 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C3A44D502EDE334800B23705 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A44D4D2EDE334800B23705 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		C3A44D522EDE334800B23705 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A44D4D2EDE334800B23705 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C3A44D622EE0A00000B23705 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A44D642EE0A00000B23705 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		C3A44D632EE0A00000B23705 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A44D642EE0A00000B23705 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3A44D0D2EDC7DA100B23705 /* Project object */;
 }
