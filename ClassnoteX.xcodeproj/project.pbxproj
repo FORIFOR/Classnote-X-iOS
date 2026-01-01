@@ -7,34 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13A18C607EDF1EA37EC2B371 /* DeepNoteShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F70649C0729AE1E0A76EBBF /* DeepNoteShareExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F1A5D3E7C1B9A6E12345678 /* FFmpeg-Kit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 6066E0213E7FDCF0EE6D83AC /* FFmpeg-Kit */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6F372D56CCDA2738D8139F1D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EE3B030DDF8AB1CABAD53 /* ShareViewController.swift */; };
+		9CE758C7579055EBAFA1DE62 /* FFmpeg-Kit in Frameworks */ = {isa = PBXBuildFile; productRef = 6066E0213E7FDCF0EE6D83AC /* FFmpeg-Kit */; };
 		C33DD31D2EFD8FDA003384B1 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C33DD31C2EFD8FDA003384B1 /* Nuke */; };
 		C33DD3202EFD9077003384B1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C33DD31F2EFD9077003384B1 /* Lottie */; };
 		C33DD3232EFD90BD003384B1 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = C33DD3222EFD90BD003384B1 /* SwiftUIX */; };
 		C33DD3252EFD90C1003384B1 /* Orbit in Frameworks */ = {isa = PBXBuildFile; productRef = C33DD3242EFD90C0003384B1 /* Orbit */; };
 		C33DD3272EFD90C3003384B1 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = C33DD3262EFD90C2003384B1 /* NukeUI */; };
-		C33DD6032EFE100000000004 /* sherpa-onnx.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33DD6002EFE100000000001 /* sherpa-onnx.xcframework */; };
-		C33DD6042EFE100000000005 /* sherpa-onnx.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C33DD6002EFE100000000001 /* sherpa-onnx.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C33DD6052EFE100000000006 /* onnxruntime.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33DD6012EFE100000000002 /* onnxruntime.xcframework */; };
-		C33DD6062EFE100000000007 /* onnxruntime.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C33DD6012EFE100000000002 /* onnxruntime.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C33DE30C2EFEE5EA003384B1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33DE30B2EFEE5EA003384B1 /* WidgetKit.framework */; };
-		C33DE30E2EFEE5EA003384B1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33DE30D2EFEE5EA003384B1 /* SwiftUI.framework */; };
-		C33DE31F2EFEE5EB003384B1 /* RecordingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C33DE30A2EFEE5EA003384B1 /* RecordingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C33DEAA12F0076C5003384B1 /* onnxruntime.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33DEA9F2F0076C5003384B1 /* onnxruntime.xcframework */; };
+		C33DEAA22F0076C5003384B1 /* sherpa-onnx.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33DEAA02F0076C5003384B1 /* sherpa-onnx.xcframework */; };
 		C3A44D4F2EDE334800B23705 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D4E2EDE334800B23705 /* FirebaseAuth */; };
 		C3A44D512EDE334800B23705 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D502EDE334800B23705 /* FirebaseCore */; };
 		C3A44D532EDE334800B23705 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D522EDE334800B23705 /* FirebaseFirestore */; };
 		C3A44D602EE0A00000B23705 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D622EE0A00000B23705 /* GoogleSignIn */; };
 		C3A44D612EE0A00000B23705 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3A44D632EE0A00000B23705 /* GoogleSignInSwift */; };
 		C3A44DA22EE0C05000B23705 /* ClassnoteXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A44DA12EE0C05000B23705 /* ClassnoteXUITests.swift */; };
+		C7B11D0C2F2E9C5F00B12345 /* LineSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C7B11D0B2F2E9C5F00B12345 /* LineSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C33DE31D2EFEE5EB003384B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A44D0D2EDC7DA100B23705 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C33DE3092EFEE5EA003384B1;
-			remoteInfo = RecordingWidgetExtension;
-		};
 		C3A44DA92EE0C05000B23705 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A44D0D2EDC7DA100B23705 /* Project object */;
@@ -51,8 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C33DD6042EFE100000000005 /* sherpa-onnx.xcframework in Embed Frameworks */,
-				C33DD6062EFE100000000007 /* onnxruntime.xcframework in Embed Frameworks */,
+				4F1A5D3E7C1B9A6E12345678 /* FFmpeg-Kit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,19 +55,31 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C33DE31F2EFEE5EB003384B1 /* RecordingWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EA4E9379E550FAEDC6273E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				13A18C607EDF1EA37EC2B371 /* DeepNoteShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C33DD6002EFE100000000001 /* sherpa-onnx.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "sherpa-onnx.xcframework"; path = "Frameworks/sherpa-onnx.xcframework"; sourceTree = "<group>"; };
-		C33DD6012EFE100000000002 /* onnxruntime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = onnxruntime.xcframework; path = Frameworks/onnxruntime.xcframework; sourceTree = "<group>"; };
-		C33DE30A2EFEE5EA003384B1 /* RecordingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RecordingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F70649C0729AE1E0A76EBBF /* DeepNoteShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeepNoteShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		508EE3B030DDF8AB1CABAD53 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		5AADDD014EAEBB9F563BED91 /* DeepNoteShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeepNoteShareExtension.entitlements; sourceTree = "<group>"; };
 		C33DE30B2EFEE5EA003384B1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C33DE30D2EFEE5EA003384B1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C33DEA9F2F0076C5003384B1 /* onnxruntime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = onnxruntime.xcframework; path = Frameworks/onnxruntime.xcframework; sourceTree = "<group>"; };
+		C33DEAA02F0076C5003384B1 /* sherpa-onnx.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "sherpa-onnx.xcframework"; path = "Frameworks/sherpa-onnx.xcframework"; sourceTree = "<group>"; };
 		C3A44D152EDC7DA100B23705 /* ClassnoteX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassnoteX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A44D842EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClassnoteX/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3A44DA12EE0C05000B23705 /* ClassnoteXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassnoteXUITests.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		C3F0A1A12F01000100000002 /* ClassnoteX/Models/ASR/sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01/encoder-epoch-99-avg-1.int8.onnx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClassnoteX/Models/ASR/sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01/encoder-epoch-99-avg-1.int8.onnx"; sourceTree = "<group>"; };
 		C3F0A1A12F01000100000003 /* ClassnoteX/Models/ASR/sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01/joiner-epoch-99-avg-1.int8.onnx */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ClassnoteX/Models/ASR/sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01/joiner-epoch-99-avg-1.int8.onnx"; sourceTree = "<group>"; };
 		C3F0A1A12F01000100000004 /* ClassnoteX/Models/ASR/sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01/tokens.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ClassnoteX/Models/ASR/sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01/tokens.txt"; sourceTree = "<group>"; };
+		F228B9099730FA3964578B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -98,11 +103,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C33DE30F2EFEE5EA003384B1 /* RecordingWidget */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RecordingWidget;
-			sourceTree = "<group>";
-		};
 		C3A44D172EDC7DA100B23705 /* ClassnoteX */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -114,21 +114,11 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C33DE3072EFEE5EA003384B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C33DE30E2EFEE5EA003384B1 /* SwiftUI.framework in Frameworks */,
-				C33DE30C2EFEE5EA003384B1 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3A44D122EDC7DA100B23705 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C33DD6032EFE100000000004 /* sherpa-onnx.xcframework in Frameworks */,
-				C33DD6052EFE100000000006 /* onnxruntime.xcframework in Frameworks */,
+				9CE758C7579055EBAFA1DE62 /* FFmpeg-Kit in Frameworks */,
 				C3A44D602EE0A00000B23705 /* GoogleSignIn in Frameworks */,
 				C33DD3202EFD9077003384B1 /* Lottie in Frameworks */,
 				C3A44D512EDE334800B23705 /* FirebaseCore in Frameworks */,
@@ -137,12 +127,22 @@
 				C33DD31D2EFD8FDA003384B1 /* Nuke in Frameworks */,
 				C33DD3272EFD90C3003384B1 /* NukeUI in Frameworks */,
 				C3A44D532EDE334800B23705 /* FirebaseFirestore in Frameworks */,
+				C33DEAA12F0076C5003384B1 /* onnxruntime.xcframework in Frameworks */,
+				C33DEAA22F0076C5003384B1 /* sherpa-onnx.xcframework in Frameworks */,
 				C3A44D612EE0A00000B23705 /* GoogleSignInSwift in Frameworks */,
+				C7B11D0C2F2E9C5F00B12345 /* LineSDK in Frameworks */,
 				C33DD3252EFD90C1003384B1 /* Orbit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C3A44DA72EE0C05000B23705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C708BE18D2A8ADD37641EDC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -155,8 +155,6 @@
 		C33DD6022EFE100000000003 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C33DD6002EFE100000000001 /* sherpa-onnx.xcframework */,
-				C33DD6012EFE100000000002 /* onnxruntime.xcframework */,
 				C33DE30B2EFEE5EA003384B1 /* WidgetKit.framework */,
 				C33DE30D2EFEE5EA003384B1 /* SwiftUI.framework */,
 			);
@@ -178,12 +176,14 @@
 			isa = PBXGroup;
 			children = (
 				C3A44D172EDC7DA100B23705 /* ClassnoteX */,
-				C33DE30F2EFEE5EA003384B1 /* RecordingWidget */,
+				EE9F8C6F3B97691087A02385 /* DeepNoteShareExtension */,
 				C3A44D162EDC7DA100B23705 /* Products */,
 				C3A44D842EE0B6A700B23705 /* ClassnoteX/GoogleService-Info.plist */,
 				C3A44DA52EE0C05000B23705 /* ClassnoteXUITests */,
 				C33DD6022EFE100000000003 /* Frameworks */,
 				C33DE4D72EFEF3D5003384B1 /* Recovered References */,
+				C33DEA9F2F0076C5003384B1 /* onnxruntime.xcframework */,
+				C33DEAA02F0076C5003384B1 /* sherpa-onnx.xcframework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				C3A44D152EDC7DA100B23705 /* ClassnoteX.app */,
+				2F70649C0729AE1E0A76EBBF /* DeepNoteShareExtension.appex */,
 				C3A44DA32EE0C05000B23705 /* ClassnoteXUITests.xctest */,
-				C33DE30A2EFEE5EA003384B1 /* RecordingWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,29 +206,34 @@
 			path = ClassnoteXUITests;
 			sourceTree = "<group>";
 		};
+		EE9F8C6F3B97691087A02385 /* DeepNoteShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				508EE3B030DDF8AB1CABAD53 /* ShareViewController.swift */,
+				F228B9099730FA3964578B8B /* Info.plist */,
+				5AADDD014EAEBB9F563BED91 /* DeepNoteShareExtension.entitlements */,
+			);
+			path = DeepNoteShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C33DE3092EFEE5EA003384B1 /* RecordingWidgetExtension */ = {
+		09771A209CE7B45DDB9A313C /* DeepNoteShareExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C33DE3202EFEE5EB003384B1 /* Build configuration list for PBXNativeTarget "RecordingWidgetExtension" */;
+			buildConfigurationList = 604788DAAD08AAC1ABBF505C /* Build configuration list for PBXNativeTarget "DeepNoteShareExtension" */;
 			buildPhases = (
-				C33DE3062EFEE5EA003384B1 /* Sources */,
-				C33DE3072EFEE5EA003384B1 /* Frameworks */,
-				C33DE3082EFEE5EA003384B1 /* Resources */,
+				CA66294E1363F8AD0F83BDD5 /* Sources */,
+				C708BE18D2A8ADD37641EDC8 /* Frameworks */,
+				0189BE72132E92EDC559DDE7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				C33DE30F2EFEE5EA003384B1 /* RecordingWidget */,
-			);
-			name = RecordingWidgetExtension;
-			packageProductDependencies = (
-			);
-			productName = RecordingWidgetExtension;
-			productReference = C33DE30A2EFEE5EA003384B1 /* RecordingWidgetExtension.appex */;
+			name = DeepNoteShareExtension;
+			productName = DeepNoteShareExtension;
+			productReference = 2F70649C0729AE1E0A76EBBF /* DeepNoteShareExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		C3A44D142EDC7DA100B23705 /* ClassnoteX */ = {
@@ -238,19 +243,20 @@
 				C3A44D112EDC7DA100B23705 /* Sources */,
 				C3A44D122EDC7DA100B23705 /* Frameworks */,
 				C3A44D132EDC7DA100B23705 /* Resources */,
+				F3EA4E9379E550FAEDC6273E /* Embed App Extensions */,
 				C33DD6072EFE100000000008 /* Embed Frameworks */,
 				C33DE3242EFEE5EB003384B1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C33DE31E2EFEE5EB003384B1 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C3A44D172EDC7DA100B23705 /* ClassnoteX */,
 			);
 			name = ClassnoteX;
 			packageProductDependencies = (
+				6066E0213E7FDCF0EE6D83AC /* FFmpeg-Kit */,
 				C3A44D4E2EDE334800B23705 /* FirebaseAuth */,
 				C3A44D502EDE334800B23705 /* FirebaseCore */,
 				C3A44D522EDE334800B23705 /* FirebaseFirestore */,
@@ -261,6 +267,7 @@
 				C33DD31F2EFD9077003384B1 /* Lottie */,
 				C33DD3222EFD90BD003384B1 /* SwiftUIX */,
 				C33DD3242EFD90C0003384B1 /* Orbit */,
+				C7B11D0B2F2E9C5F00B12345 /* LineSDK */,
 			);
 			productName = ClassnoteX;
 			productReference = C3A44D152EDC7DA100B23705 /* ClassnoteX.app */;
@@ -293,7 +300,7 @@
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
-					C33DE3092EFEE5EA003384B1 = {
+					09771A209CE7B45DDB9A313C = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 					C3A44D142EDC7DA100B23705 = {
@@ -315,12 +322,14 @@
 			mainGroup = C3A44D0C2EDC7DA100B23705;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				4876320962546B22D672C0A6 /* XCRemoteSwiftPackageReference "ffmpeg-kit-spm" */,
 				C3A44D4D2EDE334800B23705 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C3A44D642EE0A00000B23705 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				C33DD31A2EFD8FA6003384B1 /* XCRemoteSwiftPackageReference "orbit-swiftui" */,
 				C33DD31B2EFD8FDA003384B1 /* XCRemoteSwiftPackageReference "Nuke" */,
 				C33DD31E2EFD9077003384B1 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C33DD3212EFD90BD003384B1 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				C7B11D0A2F2E9C5F00B12345 /* XCRemoteSwiftPackageReference "line-sdk-ios-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C3A44D162EDC7DA100B23705 /* Products */;
@@ -328,14 +337,14 @@
 			projectRoot = "";
 			targets = (
 				C3A44D142EDC7DA100B23705 /* ClassnoteX */,
+				09771A209CE7B45DDB9A313C /* DeepNoteShareExtension */,
 				C3A44DA62EE0C05000B23705 /* ClassnoteXUITests */,
-				C33DE3092EFEE5EA003384B1 /* RecordingWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C33DE3082EFEE5EA003384B1 /* Resources */ = {
+		0189BE72132E92EDC559DDE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,13 +361,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C33DE3062EFEE5EA003384B1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3A44D112EDC7DA100B23705 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,14 +376,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA66294E1363F8AD0F83BDD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F372D56CCDA2738D8139F1D /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C33DE31E2EFEE5EB003384B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C33DE3092EFEE5EA003384B1 /* RecordingWidgetExtension */;
-			targetProxy = C33DE31D2EFEE5EB003384B1 /* PBXContainerItemProxy */;
-		};
 		C3A44DAA2EE0C05000B23705 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3A44D142EDC7DA100B23705 /* ClassnoteX */;
@@ -390,65 +395,57 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		C33DE3212EFEE5EB003384B1 /* Debug */ = {
+		1D74001E38A31725DB990C9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DeepNoteShareExtension/DeepNoteShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6RR7572ZLU;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RecordingWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RecordingWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DeepNoteShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DeepNote Share";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.classnote.RecordingWidget;
+				MARKETING_VERSION = 1.2.10;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.deepnote.shareextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C33DE3222EFEE5EB003384B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6RR7572ZLU;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RecordingWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RecordingWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.classnote.RecordingWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		3741E91553ACE6F5A03CAAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DeepNoteShareExtension/DeepNoteShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6RR7572ZLU;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DeepNoteShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DeepNote Share";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.10;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.deepnote.shareextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		C3A44D1E2EDC7DA200B23705 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -576,20 +573,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClassnoteX/ClassnoteX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6RR7572ZLU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Frameworks/sherpa-onnx.xcframework/Headers",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ClassnoteX/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CLASSNOTE-X";
+				INFOPLIST_KEY_CFBundleDisplayName = DeepNote;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "録音機能のためにマイクへのアクセスを使用します。";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音中の文字起こしに使用します";
+				INFOPLIST_KEY_NSCameraUsageDescription = "写真を撮影してセッションに追加するためにカメラを使用します。";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "講義や会議を録音するためにマイクを使用します。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "写真を選択してセッションに追加するためにフォトライブラリにアクセスします。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音中のライブ文字起こしに音声認識を使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -600,7 +597,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.10;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.classnote;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.deepnote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -617,20 +614,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClassnoteX/ClassnoteX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6RR7572ZLU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Frameworks/sherpa-onnx.xcframework/Headers",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ClassnoteX/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CLASSNOTE-X";
+				INFOPLIST_KEY_CFBundleDisplayName = DeepNote;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "録音機能のためにマイクへのアクセスを使用します。";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音中の文字起こしに使用します";
+				INFOPLIST_KEY_NSCameraUsageDescription = "写真を撮影してセッションに追加するためにカメラを使用します。";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "講義や会議を録音するためにマイクを使用します。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "写真を選択してセッションに追加するためにフォトライブラリにアクセスします。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音中のライブ文字起こしに音声認識を使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -641,7 +638,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.10;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.classnote;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.horioshuhei.deepnote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -756,11 +753,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C33DE3202EFEE5EB003384B1 /* Build configuration list for PBXNativeTarget "RecordingWidgetExtension" */ = {
+		604788DAAD08AAC1ABBF505C /* Build configuration list for PBXNativeTarget "DeepNoteShareExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C33DE3212EFEE5EB003384B1 /* Debug */,
-				C33DE3222EFEE5EB003384B1 /* Release */,
+				3741E91553ACE6F5A03CAAF0 /* Debug */,
+				1D74001E38A31725DB990C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -795,6 +792,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4876320962546B22D672C0A6 /* XCRemoteSwiftPackageReference "ffmpeg-kit-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tylerjonesio/ffmpeg-kit-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.2;
+			};
+		};
 		C33DD31A2EFD8FA6003384B1 /* XCRemoteSwiftPackageReference "orbit-swiftui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kiwicom/orbit-swiftui";
@@ -843,9 +848,22 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		C7B11D0A2F2E9C5F00B12345 /* XCRemoteSwiftPackageReference "line-sdk-ios-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/line/line-sdk-ios-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6066E0213E7FDCF0EE6D83AC /* FFmpeg-Kit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4876320962546B22D672C0A6 /* XCRemoteSwiftPackageReference "ffmpeg-kit-spm" */;
+			productName = "FFmpeg-Kit";
+		};
 		C33DD31C2EFD8FDA003384B1 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C33DD31B2EFD8FDA003384B1 /* XCRemoteSwiftPackageReference "Nuke" */;
@@ -895,6 +913,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3A44D642EE0A00000B23705 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		C7B11D0B2F2E9C5F00B12345 /* LineSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7B11D0A2F2E9C5F00B12345 /* XCRemoteSwiftPackageReference "line-sdk-ios-swift" */;
+			productName = LineSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

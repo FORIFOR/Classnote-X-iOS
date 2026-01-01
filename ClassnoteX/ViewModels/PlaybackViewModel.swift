@@ -1,5 +1,16 @@
+import Foundation
 import SwiftUI
 import Combine
+#if canImport(FFmpegKit)
+import FFmpegKit
+#elseif canImport(ffmpegkit)
+import ffmpegkit
+#endif
+
+struct AudioSource {
+    let url: URL
+    let meta: AudioMeta?
+}
 
 final class PlaybackViewModel: ObservableObject {
     @Published var currentTime: Double = 0
@@ -48,20 +59,75 @@ final class PlaybackViewModel: ObservableObject {
         stopTimer()
     }
     
-    func playPause(url: URL? = nil) {
+    func playPause(source: AudioSource? = nil) {
         if isPlaying {
             AudioPlayerManager.shared.pause(sessionId: sessionId)
         } else {
             if AudioPlayerManager.shared.currentSessionId == sessionId {
                 AudioPlayerManager.shared.resume(sessionId: sessionId)
-            } else if let url = url {
-                AudioPlayerManager.shared.play(url: url, sessionId: sessionId)
-                // Duration might be updated after play starts
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    self.duration = AudioPlayerManager.shared.duration(for: self.sessionId) ?? 0
+            } else if let source {
+                Task {
+                    await play(source: source)
                 }
             }
         }
+    }
+
+    private func play(source: AudioSource) async {
+        do {
+            let playableURL = try await preparePlayableURL(from: source)
+            await MainActor.run {
+                if AudioPlayerManager.shared.play(url: playableURL, sessionId: sessionId) {
+                    // Duration might be updated after play starts
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                        guard let self else { return }
+                        self.duration = AudioPlayerManager.shared.duration(for: self.sessionId) ?? 0
+                    }
+                }
+            }
+        } catch {
+            print("[PlaybackViewModel] Failed to play audio: \(error)")
+        }
+    }
+
+    private func preparePlayableURL(from source: AudioSource) async throws -> URL {
+        let isRemote = !source.url.isFileURL
+        var localURL = source.url
+        if isRemote {
+            localURL = try await downloadToTemporaryFile(from: source.url)
+        }
+
+        if requiresTranscode(source: source, localURL: localURL) {
+            let decodedURL = try await AudioTranscoder.decodeToWav(inputURL: localURL)
+            if isRemote {
+                try? FileManager.default.removeItem(at: localURL)
+            }
+            return decodedURL
+        }
+
+        return localURL
+    }
+
+    private func requiresTranscode(source: AudioSource, localURL: URL) -> Bool {
+        let codec = source.meta?.codec.lowercased()
+        let container = source.meta?.container.lowercased()
+        let ext = localURL.pathExtension.lowercased()
+        if codec == "opus" || container == "ogg" || ext == "ogg" {
+            return true
+        }
+        return false
+    }
+
+    private func downloadToTemporaryFile(from url: URL) async throws -> URL {
+        let (tempURL, _) = try await URLSession.shared.download(from: url)
+        let ext = url.pathExtension.isEmpty ? "dat" : url.pathExtension
+        let filename = "audio_\(UUID().uuidString).\(ext)"
+        let destURL = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        if FileManager.default.fileExists(atPath: destURL.path) {
+            try FileManager.default.removeItem(at: destURL)
+        }
+        try FileManager.default.moveItem(at: tempURL, to: destURL)
+        return destURL
     }
     
     func seek(to time: Double) {
@@ -90,5 +156,42 @@ final class PlaybackViewModel: ObservableObject {
     private func stopTimer() {
         timer?.invalidate()
         timer = nil
+    }
+}
+
+private enum AudioPlaybackError: Error {
+    case ffmpegUnavailable
+    case ffmpegFailed(String)
+    case outputMissing
+}
+
+private enum AudioTranscoder {
+    static func decodeToWav(inputURL: URL) async throws -> URL {
+        let outputURL = FileManager.default.temporaryDirectory.appendingPathComponent("decoded_\(UUID().uuidString).wav")
+        if FileManager.default.fileExists(atPath: outputURL.path) {
+            try? FileManager.default.removeItem(at: outputURL)
+        }
+#if canImport(FFmpegKit) || canImport(ffmpegkit)
+        let cmd = """
+        -y -i "\(inputURL.path)" -ac 1 -ar 16000 -c:a pcm_s16le "\(outputURL.path)"
+        """
+        try await withCheckedThrowingContinuation { cont in
+            FFmpegKit.executeAsync(cmd) { session in
+                let rc = session?.getReturnCode()
+                if rc?.isValueSuccess() == true {
+                    cont.resume(returning: ())
+                } else {
+                    let log = session?.getAllLogsAsString() ?? "no log"
+                    cont.resume(throwing: AudioPlaybackError.ffmpegFailed(log))
+                }
+            }
+        }
+#else
+        throw AudioPlaybackError.ffmpegUnavailable
+#endif
+        guard FileManager.default.fileExists(atPath: outputURL.path) else {
+            throw AudioPlaybackError.outputMissing
+        }
+        return outputURL
     }
 }

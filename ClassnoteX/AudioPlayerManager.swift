@@ -33,35 +33,40 @@ class AudioPlayerManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         }
 
         do {
-            // 1. File size verification
-            let attrs = try FileManager.default.attributesOfItem(atPath: url.path)
-            let fileSize = (attrs[.size] as? NSNumber)?.intValue ?? -1
-            print("[AudioPlayerManager] File size = \(fileSize) bytes")
-            
-            if fileSize <= 0 {
-                print("[AudioPlayerManager] ❌ File is empty or inaccessible!")
-                isPlaying = false
-                currentSessionId = nil
-                return false
+            if url.isFileURL {
+                // 1. File size verification
+                let attrs = try FileManager.default.attributesOfItem(atPath: url.path)
+                let fileSize = (attrs[.size] as? NSNumber)?.intValue ?? -1
+                print("[AudioPlayerManager] File size = \(fileSize) bytes")
+
+                if fileSize <= 0 {
+                    print("[AudioPlayerManager] ❌ File is empty or inaccessible!")
+                    isPlaying = false
+                    currentSessionId = nil
+                    return false
+                }
             }
-            
+
             // 2. Configure audio session
             let session = AVAudioSession.sharedInstance()
             try session.setCategory(.playAndRecord, mode: .spokenAudio, options: [.defaultToSpeaker, .allowBluetooth])
             try session.setActive(true)
-            
-            // 3. Load file as Data
-            let data = try Data(contentsOf: url)
-            
-            if data.isEmpty {
-                print("[AudioPlayerManager] ❌ Data is empty!")
-                isPlaying = false
-                currentSessionId = nil
-                return false
+
+            // 3. Create player
+            let newPlayer: AVAudioPlayer
+            if url.isFileURL {
+                newPlayer = try AVAudioPlayer(contentsOf: url)
+            } else {
+                let data = try Data(contentsOf: url)
+                if data.isEmpty {
+                    print("[AudioPlayerManager] ❌ Data is empty!")
+                    isPlaying = false
+                    currentSessionId = nil
+                    return false
+                }
+                let hint = fileTypeHint(for: url)
+                newPlayer = try AVAudioPlayer(data: data, fileTypeHint: hint)
             }
-            
-            // 4. Create player
-            let newPlayer = try AVAudioPlayer(data: data, fileTypeHint: AVFileType.m4a.rawValue)
             newPlayer.delegate = self
             newPlayer.enableRate = true
             newPlayer.prepareToPlay()
@@ -84,6 +89,19 @@ class AudioPlayerManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
             isPlaying = false
             currentSessionId = nil
             return false
+        }
+    }
+
+    private func fileTypeHint(for url: URL) -> String? {
+        switch url.pathExtension.lowercased() {
+        case "wav":
+            return AVFileType.wav.rawValue
+        case "m4a":
+            return AVFileType.m4a.rawValue
+        case "mp4":
+            return AVFileType.mp4.rawValue
+        default:
+            return nil
         }
     }
     
